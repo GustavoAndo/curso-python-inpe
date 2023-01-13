@@ -1,5 +1,5 @@
-def get_year(a):
-    if len(a) == 45:
+def get_year(modis_name):
+    if len(modis_name) == 45:
         return a[9:13]
     return None
 
