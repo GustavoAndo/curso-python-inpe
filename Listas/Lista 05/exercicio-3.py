@@ -54,12 +54,12 @@ def pentagonal(n):
 
 while True:
     n = int(input("Digite um número natural: "))
-    if n >= 0: break
+    if n >= 0: 
+        lucas(n)
+        pell(n)
+        triangular(n)
+        square(n)
+        pentagonal(n)
+        break
     else: print("Número inválido!")
 print()
-
-lucas(n)
-pell(n)
-triangular(n)
-square(n)
-pentagonal(n)
