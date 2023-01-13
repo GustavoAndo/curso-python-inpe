@@ -1,0 +1,9 @@
+O principal objeto manipulado pela NumPy é o homogeneous multidimensional array
+– Uma tabela de elementos de mesmo tipo (em geral números) indexados por uma tupla de inteiros positivos
+– As dimensões são chamadas de axes
+– O número de axes é chamado de rank
+    exemplo 1:
+    [1, 2, 1] → rank 1
+    exemplo 2:
+    [[ 1.0, 0.0, 0.0], [0.0, 1.0, 2.0]] → rank = 2, a primeira dimensão tem tamanho 2, a segunda dimensão tem tamanho 3
+- A classe de array do NumPy é chamada ndarray (numpy.array)
