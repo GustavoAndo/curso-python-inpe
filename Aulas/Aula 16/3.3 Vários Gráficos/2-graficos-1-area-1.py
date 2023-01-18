@@ -4,7 +4,7 @@ import numpy as np
 # criando arrays de númeors aleatórios (100 numeros de 0 a 2)
 t = np.linspace(0.0, 2.0, 100)
 
-# criando dois novos arrays multiplicando os valores aleatórios por pi e por pi * 2
+# criando dois novos arrays multiplicando os valores aleatórios por pi e por pi * 2 e conseguindo o valor de seno
 f1 = np.sin(np.pi*t)
 f2 = np.sin(2*np.pi*t)
 
