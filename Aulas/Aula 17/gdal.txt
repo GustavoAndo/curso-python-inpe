@@ -1,0 +1,44 @@
+GDAL é uma biblioteca para tradução de formatos de dados geográficos distribuída pela Open Source Geospatial Foundation (osgeo) sob a licença X/MIT estilo Open Source.
+
+GDAL significa Geospatial Data Abstraction Library (Biblioteca de Abstrações de Dados Geoespaciais), e permite aos usuários manipular 142 formatos de arquivos raster e 84 formatos de arquivos vetoriais.
+
+As aplicações que a utilizam acessam todos os formatos suportados pela biblioteca através de um único modelo de dados abstrato. A biblioteca GDAL também conta com uma variadade de programas utilitários de linha de comando para a tradução de formatos bem como uma série de outras funções.
+
+Tradicionalmente a biblioteca GDAL referia-se a dados Raster enquanto que OGR referia-se a dados Vetorias (Simple Features). Mas a partir da versão 2.0 as duas partes estão mais integradas.
+
+Página principal: http://www.gdal.org 
+Documentação oficial para Python: http://gdal.org/python/
+
+Estrutura de armazenamento
+
+Um raster pode ser armazenado de diferentes formas, uma delas é através do armazenamento individual, um raster independente para cada banda. Neste caso, cada arquivo possui metadados (sistema de coordenadas, limites geográficos), independentes.
+
+Outra maneira é armazenar diversas bandas no mesmo arquivo. Neste caso, o conjunto de metadados vale para todas as bandas.
+
+Obs.: Um raster pode ter qualquer número de bandas, desde que suportado pelo seu formato.
+
+Grade
+
+A grade (grid) contém metadados relacionados às imagens, incluindo:
+
+limites geográficos
+sistema de referência espacial
+número de linhas/colunas
+6 coeficientes para transformação afim:
+[0] is the x coordinate of the upper left cell in raster
+[1] is the width of the elements in the raster
+[2] is the element rotation in x, is set to 0 if a north up raster
+[3] is the y coordinate of the upper left cell in raster
+[4] is the element rotation in y, is set to 0 if a north up raster
+[5] is the height of the elements in the raster (negative)
+
+Banda
+
+A banda (band) é que contém as informações dos níveis digitais das imagens, além de outras propriedades:
+
+NoDataValue
+Minimum/Maximum
+Histogram
+Tipo de dados
+Estatísticas (média/desvio padrão)
+matriz de pixels
