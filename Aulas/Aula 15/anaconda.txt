@@ -1,0 +1,35 @@
+conda info
+mostrar informações do ambiente
+
+conda --version
+mostrar a versão
+
+conda create --name geospatial python=3 numpy matplotlib pandas geopandas fiona shapely
+criar ambiente
+
+conda activate geospatial
+tranformar no ambiente criado
+
+conda search gdal
+visualizar se o pacote está disponível
+
+conda install gdal
+instalar um pacote
+
+python -c "from osgeo import gdal;print(gdal.VersionInfo('VERSION_STRING'))"
+verificar se o pacote foi instalado corretamente
+
+conda list
+lista dos pacotes e suas versões
+
+conda update gdal
+atualizar pacote
+
+conda uninstall gdal
+remover pacote
+
+conda create --clone ser347 --name cap394
+criar copia do ambiente
+
+conda remove --name cap394 --all
+excluir ambiente
