@@ -1,6 +1,8 @@
 from osgeo import gdal
 from gdalconst import *
 
+gdal.UseExceptions()
+
 filename = "./raster/crop_rapideye.tif"
 dataset = gdal.Open(filename, GA_ReadOnly)
 
@@ -10,3 +12,5 @@ colunas = dataset.RasterXSize
 
 print ("Número de linhas:", linhas)
 print ("Número de colunas:", colunas)
+
+dataset = None 

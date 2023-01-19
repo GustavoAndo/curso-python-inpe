@@ -6,6 +6,8 @@ dataset = gdal.Open(filename, GA_ReadOnly)
 banda_nir = dataset.GetRasterBand(5)
 banda_red = dataset.GetRasterBand(3)
 
+gdal.UseExceptions()
+
 # quantidade de bandas
 bandas = dataset.RasterCount
 
@@ -39,3 +41,5 @@ plt.title("NDVI")
 plt.imshow(array_ndvi, cmap='gray')
 
 plt.show()
+
+dataset = None 

@@ -4,6 +4,8 @@ from gdalconst import *
 filename = "./raster/crop_rapideye.tif"
 dataset = gdal.Open(filename, GA_ReadOnly)
 
+gdal.UseExceptions()
+
 # retorna uma tupla referentes à transformação de georreferenciamento do dataset 
 geotransform = dataset.GetGeoTransform()
 print (geotransform)
@@ -27,3 +29,5 @@ print ("Resolução (y) do dataset:", resolucao_y)
 
 # retorna uma descrição em formato WKT (Well-Known Text), que é uma linguagem de marcação de texto utilizada para representar um sistema de referência espacial dos objetos geográficos e a transformação entre sistemas de coordenadas
 print (dataset.GetProjectionRef())
+
+dataset = None 

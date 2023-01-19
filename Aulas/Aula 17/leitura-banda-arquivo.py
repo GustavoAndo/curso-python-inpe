@@ -1,6 +1,8 @@
 from osgeo import gdal
 from gdalconst import *
 
+gdal.UseExceptions()
+
 filename = "./raster/crop_rapideye.tif"
 dataset = gdal.Open(filename, GA_ReadOnly)
 
@@ -23,3 +25,5 @@ print (" - banda RED:", gdal.GetDataTypeName(banda_red.DataType))
 (menor_valor, maior_valor) = banda_red.ComputeRasterMinMax()
 print("Menor valor de RED:", menor_valor)
 print("Maior valor de RED:", maior_valor)
+
+dataset = None 
